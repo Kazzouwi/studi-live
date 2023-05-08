@@ -1,0 +1,7 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block main %}
+    {{ form(articleForm) }}
+    <a href="{{ path('admin_article_list') }}">Retour à la liste des articles</a>
+{% endblock main %}
+

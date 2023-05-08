@@ -3,7 +3,10 @@
 namespace App\Controller;
 
 use App\Repository\ArticleRepository;
+use App\Repository\CategoryRepository;
+use SebastianBergmann\CodeCoverage\Report\Html\Renderer;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ArticleController extends AbstractController
@@ -27,6 +30,19 @@ class ArticleController extends AbstractController
 
         return $this->render('articleShow.html.twig', [
             'article' => $article
+        ]);
+    }
+    
+    #[Route('/search', name: 'article_search')]
+    public function search(ArticleRepository $articleRepository, Request $request)
+    {
+        $term = $request->query->get('q');
+
+        $articles = $articleRepository->searchByTerm($term);
+
+        return $this->render('articleSearch.html.twig', [
+            'articles' => $articles,
+            'term' => $term
         ]);
     }
 }
