@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    {% for article in articles %}
+        <article>
+            <a href="{{ path('article_show', { 'id': article.id}) }}">
+                <h1>{{ article.title }}</h1>
+            </a>
+            <p>{{ article.content }}<p>
+        </article>
+    {% endfor %}
+{% endblock main %}
