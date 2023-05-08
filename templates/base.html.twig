@@ -17,6 +17,14 @@
         <input type="text" name="q">
         <input type="submit">
     </form>
+    <a href="{{ path('home')}}">Accueil</a>
+    {% if app.user %}
+        <a href="{{ path('app_logout') }}">Deconnexion</a>
+    {% else %}
+        <a href="{{ path('app_login') }}">Connexion</a>
+    {% endif %}
+    
+    
 </header>
 
 <main>

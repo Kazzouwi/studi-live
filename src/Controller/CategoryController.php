@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CategoryController extends AbstractController
 {
-    #[Route('/categories', name: 'categories_list')]
+    #[Route('/categories', name: 'category_list')]
     public function categoryList(CategoryRepository $categoryRepository)
     {
         $categories = $categoryRepository->findAll();
