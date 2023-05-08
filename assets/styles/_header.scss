@@ -1,0 +1,15 @@
+.header {
+    background-color: lightblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    height: 100px;
+}
+
+.logo {
+    width: 75px;
+    height: 75px;
+    margin-left: 25px;
+    border-radius: 8px;
+}

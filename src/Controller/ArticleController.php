@@ -26,6 +26,11 @@ class ArticleController extends AbstractController
                 'title' => 'Article 3',
                 'content' => 'Lorem ipsum dolor sit amet'
             ],
+            [
+                'id' => 4,
+                'title' => 'Article 4',
+                'content' => 'Lorem ipsum dolor sit amet'
+            ],
         ];
 
         $isSidebarDisplayed = false;
@@ -53,6 +58,11 @@ class ArticleController extends AbstractController
             [
                 'id' => 3,
                 'title' => 'Article 3',
+                'content' => 'Lorem ipsum dolor sit amet'
+            ],
+            [
+                'id' => 4,
+                'title' => 'Article 4',
                 'content' => 'Lorem ipsum dolor sit amet'
             ],
         ];

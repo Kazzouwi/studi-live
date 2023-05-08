@@ -1,0 +1,10 @@
+.articles-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article {
+    width: 50%;
+    background-color: lightyellow;
+    border: 1px solid black;
+}
