@@ -1,8 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block main %}
-    <article>
+    <article class="article">
         <h1>{{ article.title }}</h1>
-        <p>{{ article.content }}</p>
+        <p>{{ article.content }}<p>
+        <p style="background-color: {{ article.category.color}}">{{ article.category.title }}</p>
     </article>
 {% endblock main %}

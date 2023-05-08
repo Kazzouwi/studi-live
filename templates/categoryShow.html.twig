@@ -1,8 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block main %}
+    <h1>{{ category.title }}</h1>
     <div class="articles-container">
-        {% for article in articles %}
+        {% for article in category.articles %}
             <article class="article">
                 <h1>{{ article.title }}</h1>
                 <p>{{ article.content }}<p>
